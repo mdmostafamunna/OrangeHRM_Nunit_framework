@@ -1,30 +1,48 @@
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
 namespace OrangeHRM_Nunit_framework
 {
     public class Tests
     {
+
+        IWebDriver driver;
+
+
+
+
         [SetUp]
         public void Setup()
         {
+            driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+
             TestContext.Progress.WriteLine("Output for Set up method of  Nunit");
         }
 
         [Test]
-        public void Test1()
+        public void NavigateToTheURL()
         {
-            TestContext.Progress.WriteLine("Output for Test1 method of  Nunit");
+            driver.Navigate().GoToUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+            TestContext.Progress.WriteLine(driver.Title);
         }
 
         [Test]
-        public void Test2()
+        public void ValidateTheTitle()
         {
-            TestContext.Progress.WriteLine("Output for Test2 method of  Nunit");
-            Assert.AreEqual(2, 2);
+            NavigateToTheURL();
+            string expectedTitle = "OrangeHRM";
+            string actualTitle = driver.Title;
+            Assert.AreEqual(expectedTitle, actualTitle);
+
+            TestContext.Progress.WriteLine("Output for Set up method of  Nunit");
+
         }
 
         [TearDown]
         public void TearDown()
         {
-            TestContext.Progress.WriteLine("Output for TearDown method of  Nunit");
+            driver.Close();
         }
     }
 }

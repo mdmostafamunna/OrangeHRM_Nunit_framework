@@ -97,3 +97,8 @@ C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_frame
 C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\obj\Debug\net6.0\OrangeHRM_Nunit_framework.pdb
 C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\obj\Debug\net6.0\OrangeHRM_Nunit_framework.genruntimeconfig.cache
 C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\obj\Debug\net6.0\ref\OrangeHRM_Nunit_framework.dll
+C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\bin\Debug\net6.0\WebDriver.Support.dll
+C:\Users\Fin Source\source\repos\OrangeHRM_Nunit_framework\OrangeHRM_Nunit_framework\bin\Debug\net6.0\WebDriver.dll
