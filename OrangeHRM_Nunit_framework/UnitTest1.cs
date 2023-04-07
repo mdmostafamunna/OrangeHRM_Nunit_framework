@@ -4,14 +4,11 @@ using OpenQA.Selenium.Chrome;
 namespace OrangeHRM_Nunit_framework
 {
     [TestFixture]
-    [Ignore("All tese methods have been skipped")]
+
     public class Tests
     {
 
         IWebDriver driver;
-
-
-
 
         [SetUp]
         public void Setup()
@@ -26,21 +23,24 @@ namespace OrangeHRM_Nunit_framework
         public void NavigateToTheURL()
         {
             driver.Navigate().GoToUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-            TestContext.Progress.WriteLine(driver.Title);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.FindElement(By.Name("username")).SendKeys("Admin");
+            driver.FindElement(By.Name("password")).SendKeys("admin123");
+            driver.FindElement(By.XPath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")).Click();
+            driver.FindElement(By.XPath("//body/div[@id='app']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[1]")).Click();
+
         }
 
         [Test]
-        [Ignore("This Method is skipping")]
-        public void ValidateTheTitle()
+        public void AddAdmin()
         {
             NavigateToTheURL();
-            string expectedTitle = "OrangeHRM";
-            string actualTitle = driver.Title;
-            Assert.AreEqual(expectedTitle, actualTitle);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.FindElement(By.XPath("//body/div[@id='app']/div[1]/div[1]/aside[1]/nav[1]/div[2]/ul[1]/li[1]/a[1]")).Click();
 
-            TestContext.Progress.WriteLine("Output for Set up method of  Nunit");
 
         }
+
 
         [TearDown]
         public void TearDown()
