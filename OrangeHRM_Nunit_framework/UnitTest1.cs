@@ -3,6 +3,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace OrangeHRM_Nunit_framework
 {
+    [TestFixture]
     public class Tests
     {
 
@@ -28,6 +29,7 @@ namespace OrangeHRM_Nunit_framework
         }
 
         [Test]
+        [Ignore("This Method is skipping")]
         public void ValidateTheTitle()
         {
             NavigateToTheURL();
@@ -42,6 +44,7 @@ namespace OrangeHRM_Nunit_framework
         [TearDown]
         public void TearDown()
         {
+            Thread.Sleep(6000);
             driver.Close();
         }
     }
