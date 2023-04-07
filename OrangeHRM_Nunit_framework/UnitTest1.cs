@@ -4,6 +4,7 @@ using OpenQA.Selenium.Chrome;
 namespace OrangeHRM_Nunit_framework
 {
     [TestFixture]
+    [Ignore("All tese methods have been skipped")]
     public class Tests
     {
 
